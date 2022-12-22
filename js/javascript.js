@@ -62,3 +62,43 @@ for(let i=1;i<5;i++) {
     let precioProducto = parseFloat(prompt("ingresa el precio del producto"));
     calcularDescuento(precioProducto);
 }
+
+class Frutas {
+    constructor(nombre, tipo, consumo, color, id){
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.consumo = consumo;
+        this.color = color;
+        this.id = id;
+
+        }    
+    asignarId(array) {
+            this.id = array.length;
+    }
+  
+    
+}
+
+const frutas = [
+    new Frutas('Bananas','Baya tropical','alto','amarillo',1),
+    new Frutas('Manzanas','Malus domestica', 'alto', 'roja',2),
+    new Frutas('Peras','Pomo', 'medio', 'verde',3),
+    new Frutas('Frutillas','Rosacea', 'medio', 'roja',4),
+    new Frutas('Naranjas','Citrico', 'medio', 'naranja',5),
+
+]
+
+let continuar = true;
+
+while(continuar){
+    let ingreso = prompt('Ingrese datos de la fruta: nombre, tipo, consumo, color, separados por una barra diagonal(/). Ingresa x para finalizar');
+
+if(ingreso.toUpperCase()=='X') {
+    continuar = false;
+    break
+}   
+
+let datos = ingreso.split('/');
+console.log(datos);
+}
+    
